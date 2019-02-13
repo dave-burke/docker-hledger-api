@@ -2,7 +2,7 @@ FROM voidlinux/voidlinux
 
 MAINTAINER Dave Burke <thoughtcriminall@gmail.com>
 
-RUN xbps-install -Sy hledger-api curl \
+RUN xbps-install -Sy hledger-api bash curl \
  && mkdir /static \
  && hledger-api --swagger >> /static/docs.yml \
  && for f in index.html \
